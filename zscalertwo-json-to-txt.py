@@ -32,7 +32,7 @@ def extract_and_print_ranges(json_data, output_file):
 # Replace 'your_json_url' with the cloud URL of the JSON data from https://config.zscaler.com/
 json_url = 'https://config.zscaler.com/api/zscalertwo.net/cenr/json'
 
-# Replace 'output_file.txt' with the desired output file name
+# Replace 'zscalertwo_cidrs.txt' with the desired output file name
 output_file_name = 'python\json-fetcher\out\zscalertwo_cidrs.txt'
 
 # Fetch JSON data from the URL
