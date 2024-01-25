@@ -12,5 +12,5 @@ def process_json(url, output_file):
 
 if __name__ == "__main__":
     json_url = "https://config.zscaler.com/api/zscalertwo.net/cenr/json"
-    output_txt_file = "output.txt"
+    output_txt_file = "./test/output.txt"
     process_json(json_url, output_txt_file)
