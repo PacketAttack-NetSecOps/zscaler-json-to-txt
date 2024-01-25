@@ -27,7 +27,7 @@ def extract_and_print_ranges(json_data, output_file):
             file.write("\n".join(str(range_value) for range_value in ranges))
         print(f"IP CIDR ranges written to {output_file}")
     except AttributeError:
-        print("Error: Unable to extract ranges from the JSON data")
+        print("Error: Unable to extract CIDR blocks from the JSON data")
 
 # Replace 'your_json_url' with the cloud URL of the JSON data from https://config.zscaler.com/
 json_url = 'https://config.zscaler.com/api/zscalertwo.net/cenr/json'
