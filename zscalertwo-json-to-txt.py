@@ -23,6 +23,13 @@ def extract_and_print_ranges(json_data, output_file):
                         if range_value:
                             ranges.append(range_value)
 
+        # Specify the directory path and create the directory if it doesn't exist
+        output_directory = 'zscaler-edl'
+        os.makedirs(output_directory, exist_ok=True)
+
+        # Create the full path for the output file within the GitHub repository
+        output_file_path = os.path.join(output_directory, output_file)
+        
         with open(output_file, 'w') as file:
             file.write("\n".join(str(range_value) for range_value in ranges))
         print(f"IP CIDR ranges written to {output_file}")
@@ -33,7 +40,7 @@ def extract_and_print_ranges(json_data, output_file):
 json_url = 'https://config.zscaler.com/api/zscalertwo.net/cenr/json'
 
 # Replace 'zscalertwo_cidrs.txt' with the desired output file name
-output_file_name = 'zscalertwo_cidrs.txt'
+output_file_name = 'zscaler-edl/zscalertwo_cidrs.txt'
 
 # Fetch JSON data from the URL
 json_data = fetch_json(json_url)
