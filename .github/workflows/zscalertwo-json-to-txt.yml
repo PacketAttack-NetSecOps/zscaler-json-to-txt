@@ -26,10 +26,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config user.email "actions@github.com"
-        git config user.name "GitHub Actions"
+        git config --global user.name "actions@github.com"
+        git config --global user.email "GitHub Actions"
         git add zscalertwo_cidrs.txt
         git commit -m "Update CIDR ranges"
         git push origin main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
