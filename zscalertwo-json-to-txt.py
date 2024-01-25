@@ -1,6 +1,7 @@
 #### This Python script parses the json file at config.zscaler.com for zscalertwo.net and exports CIDR ranges to a .txt file #####
 #### Created by Justin Jones SecEng 1/23/2024 ####
 
+import os
 import requests
 import json
 
