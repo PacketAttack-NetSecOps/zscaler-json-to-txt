@@ -23,3 +23,9 @@ jobs:
 
     - name: Run Python script
       run: python ./zscalertwo-json-to-txt.py
+
+    - name: Commit and push file
+      run: |
+        git add zscalertwo_cidrs.txt
+        git commit -m "Add zscalertwo_cidrs.txt"
+        git push
