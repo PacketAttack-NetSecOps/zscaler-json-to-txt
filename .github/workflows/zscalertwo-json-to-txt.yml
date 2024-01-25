@@ -22,4 +22,4 @@ jobs:
       run: pip install requests
 
     - name: Run Python script
-      run: python test/testing1.py
+      run: python ./zscalertwo-json-to-txt.py
