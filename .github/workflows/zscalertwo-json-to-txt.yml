@@ -32,4 +32,4 @@ jobs:
         git commit -m "Update CIDR ranges"
         git push origin main
       env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
