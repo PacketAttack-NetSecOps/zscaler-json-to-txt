@@ -24,10 +24,12 @@ jobs:
     - name: Run Python script
       run: python ./zscalertwo-json-to-txt.py
 
-    - name: Commit and push file
+    - name: Commit and push changes
       run: |
-        git config --global user.email "justinitguru@gmail.com"
-        git config --global user.name "PacketAttack-NetSecOps"
+        git config user.email "actions@github.com"
+        git config user.name "GitHub Actions"
         git add zscalertwo_cidrs.txt
-        git commit -m "Add zscalertwo_cidrs.txt"
-        git push
+        git commit -m "Update CIDR ranges"
+        git push origin main
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
