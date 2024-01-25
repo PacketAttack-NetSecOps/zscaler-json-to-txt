@@ -8,7 +8,7 @@ def process_json(url, output_file):
         data = response.json()
         if 'range' in data:
             with open(output_file, 'w') as txt_file:
-                txt_file.write(str(data['range']))
+                txt_file.write(str(data["range", ""]))
 
 if __name__ == "__main__":
     json_url = "https://config.zscaler.com/api/zscalertwo.net/cenr/json"
